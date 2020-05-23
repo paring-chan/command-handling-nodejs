@@ -39,4 +39,6 @@ client.on("message", msg => {
     runCommand(command, msg, args, prefix)
 })
 
+process.on('uncaughtException', (err) => err.printStackTrace())
+
 client.login(process.env.TOKEN);
